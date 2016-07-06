@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="55t-fW-WTM">
-                                <rect key="frame" x="20" y="80" width="560" height="437"/>
+                                <rect key="frame" x="20" y="81" width="560" height="437"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitness device name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIz-tl-HNC">
                                         <rect key="frame" x="0.0" y="0.0" width="156" height="21"/>
@@ -42,30 +42,46 @@
                                     </button>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Rw0-cQ-0dQ">
                                         <rect key="frame" x="0.0" y="117" width="320" height="320"/>
+                                        <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="Rw0-cQ-0dQ" secondAttribute="height" multiplier="1:1" id="SN9-yJ-pJd"/>
+                                            <constraint firstAttribute="width" secondItem="Rw0-cQ-0dQ" secondAttribute="height" multiplier="1:1" id="b5R-l5-uGb"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="35D-uw-DhX" appends="YES" id="680-uj-i7l"/>
+                                            <outletCollection property="gestureRecognizers" destination="35D-uw-DhX" appends="YES" id="8aa-oR-adm"/>
+                                            <outletCollection property="gestureRecognizers" destination="35D-uw-DhX" appends="YES" id="afH-ak-c6Q"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="qHh-Qz-oUq" firstAttribute="leading" secondItem="55t-fW-WTM" secondAttribute="leading" id="6FQ-SK-zdL"/>
-                                    <constraint firstAttribute="trailing" secondItem="qHh-Qz-oUq" secondAttribute="trailing" id="8S1-Vq-HyX"/>
+                                    <constraint firstItem="qHh-Qz-oUq" firstAttribute="leading" secondItem="55t-fW-WTM" secondAttribute="leading" id="O0q-UL-vSF"/>
+                                    <constraint firstAttribute="trailing" secondItem="qHh-Qz-oUq" secondAttribute="trailing" id="gxr-6D-1hf"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="35D-uw-DhX" appends="YES" id="MWZ-51-ggu"/>
+                                </connections>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="55t-fW-WTM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6fm-vc-H7p"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="55t-fW-WTM" secondAttribute="trailing" id="GsQ-4I-M15"/>
-                            <constraint firstItem="55t-fW-WTM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="nmn-kz-hGM"/>
+                            <constraint firstItem="55t-fW-WTM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4aA-2s-IlG"/>
+                            <constraint firstItem="55t-fW-WTM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="61" id="Bf8-u3-7aX"/>
+                            <constraint firstItem="55t-fW-WTM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jE0-1N-qoO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="deviceNameLabel" destination="FIz-tl-HNC" id="BCz-DB-hIO"/>
                         <outlet property="nameTextField" destination="qHh-Qz-oUq" id="uZz-9b-ctI"/>
+                        <outlet property="photoImageView" destination="Rw0-cQ-0dQ" id="Y5c-wP-etj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="35D-uw-DhX">
+                    <connections>
+                        <action selector="selectImage:" destination="BYZ-38-t0r" id="kL7-B4-WLd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="448" y="389"/>
         </scene>
