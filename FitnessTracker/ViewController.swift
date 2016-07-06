@@ -92,10 +92,4 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         
         presentViewController(imagePickerController, animated: true, completion: nil)
     }
-    
-    @IBAction func setDefaultLAbelText(sender: UIButton) {
-        deviceNameLabel.text = "Default text"
-    }
-    
-
 }
