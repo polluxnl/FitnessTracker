@@ -16,7 +16,9 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var seatTextField: UITextField!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    var device: Device?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +73,21 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         // Dismiss the picker.
         
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: Navigation
+    
+    // This method lets you configure a view controller before it's presented.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if saveButton === sender {
+            let name = nameTextField.text ?? ""
+            let weight = weightTextField.text ?? ""
+            let seat = seatTextField.text ?? ""
+            let photo = photoImageView.image
+            
+            device = Device(name: name, weight: weight, seat: seat, photo: photo!)
+        }
     }
     
     

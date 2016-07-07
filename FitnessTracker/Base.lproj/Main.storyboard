@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G7b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wlo-b8-VKB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G7b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JYh-dg-ewN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Device Table View Controller-->
+        <!--Your devices-->
         <scene sceneID="kJa-MR-N2F">
             <objects>
                 <tableViewController id="Wlo-b8-VKB" customClass="DeviceTableViewController" customModule="FitnessTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DeviceTableViewCell" rowHeight="90" id="MnH-0e-r5u" customClass="DeviceTableViewCell" customModule="FitnessTracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="90"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MnH-0e-r5u" id="YFr-yJ-cNy">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
@@ -70,12 +70,19 @@
                             <outlet property="delegate" destination="Wlo-b8-VKB" id="fKZ-tQ-EJS"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Your devices" id="thj-cv-9FD">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="bNn-ZM-roV">
+                            <connections>
+                                <segue destination="VNx-C1-whN" kind="presentation" identifier="AddItem" id="BS4-oP-Wb0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRT-s6-Ouo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-76" y="407"/>
+            <point key="canvasLocation" x="736" y="407"/>
         </scene>
-        <!--Device View Controller-->
+        <!--Add new device-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DeviceViewController" customModule="FitnessTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,25 +129,71 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="55t-fW-WTM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iut-VV-20B"/>
-                            <constraint firstItem="55t-fW-WTM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="61" id="l7l-20-o41"/>
+                            <constraint firstItem="55t-fW-WTM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="8Kl-wr-70V"/>
+                            <constraint firstItem="55t-fW-WTM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sRm-wQ-1Nf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add new device" id="8gE-JB-59W">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="psv-8i-98I"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="mXe-Zm-4qy">
+                            <connections>
+                                <segue destination="b11-6H-aRg" kind="unwind" unwindAction="unwindToDeviceList:" id="B1r-7i-vfA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="qHh-Qz-oUq" id="uZz-9b-ctI"/>
                         <outlet property="photoImageView" destination="Rw0-cQ-0dQ" id="Y5c-wP-etj"/>
+                        <outlet property="saveButton" destination="mXe-Zm-4qy" id="tr3-w4-jDN"/>
                         <outlet property="seatTextField" destination="ONd-HX-o4a" id="Tqe-gJ-9Zp"/>
                         <outlet property="weightTextField" destination="Nx4-ew-iFp" id="3Fj-wI-kVO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="b11-6H-aRg" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="35D-uw-DhX">
                     <connections>
                         <action selector="selectImage:" destination="BYZ-38-t0r" id="ISI-io-81T"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="702" y="407"/>
+            <point key="canvasLocation" x="2326" y="407"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2up-Rk-KN3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JYh-dg-ewN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e6q-mF-KCt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wlo-b8-VKB" kind="relationship" relationship="rootViewController" id="qhk-wl-B1z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WrE-CO-3qz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="407"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nWQ-w0-qpv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VNx-C1-whN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eya-Ct-gnz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RzH-Lg-uYZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tac-cu-fRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1514" y="407"/>
         </scene>
     </scenes>
     <resources>
