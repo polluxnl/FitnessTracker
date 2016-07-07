@@ -13,13 +13,13 @@ import UIKit
         // MARK: Properties
         
         var name: String
-        var weight: Double
-        var seat: Int?
+        var weight: String
+        var seat: String?
         var photo: UIImage
         
         // MARK: Initialization
         
-        init?(name: String, weight: Double, seat: Int?, photo: UIImage) {
+        init?(name: String, weight: String, seat: String?, photo: UIImage) {
             
             // Initialize stored properties.
             
@@ -30,7 +30,7 @@ import UIKit
             
             // Initialization should fail if there is no name or the weight is negative.
             
-            if name.isEmpty || weight < 0 {
+            if name.isEmpty || weight.isEmpty {
                 return nil
             }
         }

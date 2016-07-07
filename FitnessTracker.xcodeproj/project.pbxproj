@@ -15,6 +15,8 @@
 		0814F0F41D2CD9CB00C4890F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0814F0F31D2CD9CB00C4890F /* Assets.xcassets */; };
 		0814F0F71D2CD9CB00C4890F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0814F0F51D2CD9CB00C4890F /* LaunchScreen.storyboard */; };
 		0814F1021D2CD9CB00C4890F /* FitnessTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814F1011D2CD9CB00C4890F /* FitnessTrackerTests.swift */; };
+		A87605D81D2E452D00625185 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87605D71D2E452D00625185 /* DeviceTableViewCell.swift */; };
+		A87605DA1D2E499B00625185 /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87605D91D2E499B00625185 /* DeviceTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		0814F0FD1D2CD9CB00C4890F /* FitnessTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0814F1011D2CD9CB00C4890F /* FitnessTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessTrackerTests.swift; sourceTree = "<group>"; };
 		0814F1031D2CD9CB00C4890F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A87605D71D2E452D00625185 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		A87605D91D2E499B00625185 /* DeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				0814F0EE1D2CD9CA00C4890F /* ViewController.swift */,
 				080CCE531D2D385D00953585 /* Device.swift */,
 				0814F0F01D2CD9CB00C4890F /* Main.storyboard */,
+				A87605D91D2E499B00625185 /* DeviceTableViewController.swift */,
+				A87605D71D2E452D00625185 /* DeviceTableViewCell.swift */,
 				0814F0F31D2CD9CB00C4890F /* Assets.xcassets */,
 				0814F0F51D2CD9CB00C4890F /* LaunchScreen.storyboard */,
 				0814F0F81D2CD9CB00C4890F /* Info.plist */,
@@ -202,8 +208,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				080CCE541D2D385D00953585 /* Device.swift in Sources */,
+				A87605DA1D2E499B00625185 /* DeviceTableViewController.swift in Sources */,
 				0814F0EF1D2CD9CA00C4890F /* ViewController.swift in Sources */,
 				0814F0ED1D2CD9CA00C4890F /* AppDelegate.swift in Sources */,
+				A87605D81D2E452D00625185 /* DeviceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
