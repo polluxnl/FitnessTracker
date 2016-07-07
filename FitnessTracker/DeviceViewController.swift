@@ -29,6 +29,15 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         weightTextField.delegate = self
         seatTextField.delegate = self
         
+        // Set up views if editing an existing Device.
+        if let device = device {
+            navigationItem.title = device.name
+            nameTextField.text   = device.name
+            weightTextField.text = device.weight
+            seatTextField.text = device.seat
+            photoImageView.image = device.photo
+        }
+        
         checkForValidInput()
     }
 

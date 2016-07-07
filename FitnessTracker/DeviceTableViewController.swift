@@ -106,15 +106,29 @@ class DeviceTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+        if segue.identifier == "ShowDetail" {
+            let deviceDetailViewController = segue.destinationViewController as! DeviceViewController
+            
+            // Get the cell that generated this segue.
+            
+            if let selectedDeviceCell = sender as? DeviceTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedDeviceCell)!
+                let selectedDevice = devices[indexPath.row]
+                deviceDetailViewController.device = selectedDevice
+            }
+        }
+        else if segue.identifier == "AddItem" {
+            print ("Adding new device.")
+        }
+        
     }
-    */
+
 
     // MARK: Actions
     
