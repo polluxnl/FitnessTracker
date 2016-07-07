@@ -73,7 +73,12 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     func textFieldDidEndEditing(textField: UITextField) {
         
         checkForValidInput()
+        
+        let nameText = nameTextField.text ?? ""
+        
+        if !nameText.isEmpty{
         navigationItem.title = nameTextField.text
+        }
  
     }
     
