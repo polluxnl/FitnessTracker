@@ -28,6 +28,8 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         nameTextField.delegate = self
         weightTextField.delegate = self
         seatTextField.delegate = self
+        
+        checkForValidInput()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +38,19 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
 
     // MARK: UITextFieldDelegate
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        saveButton.enabled = false
+    }
+    
+    func checkForValidInput() {
+        
+        let nameText = nameTextField.text ?? ""
+        let weightText = weightTextField.text ?? ""
+        
+        saveButton.enabled = !nameText.isEmpty && !weightText.isEmpty
+        
+    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
@@ -48,6 +63,8 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     func textFieldDidEndEditing(textField: UITextField) {
         
+        checkForValidInput()
+        navigationItem.title = nameTextField.text
  
     }
     
@@ -76,6 +93,11 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     // MARK: Navigation
+    
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

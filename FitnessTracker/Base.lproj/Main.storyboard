@@ -134,7 +134,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add new device" id="8gE-JB-59W">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="psv-8i-98I"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="psv-8i-98I">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="DK2-YQ-bmM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="mXe-Zm-4qy">
                             <connections>
                                 <segue destination="b11-6H-aRg" kind="unwind" unwindAction="unwindToDeviceList:" id="B1r-7i-vfA"/>
