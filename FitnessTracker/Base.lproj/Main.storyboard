@@ -78,9 +78,7 @@
                                             <constraint firstAttribute="width" secondItem="Rw0-cQ-0dQ" secondAttribute="height" multiplier="1:1" id="b5R-l5-uGb"/>
                                         </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="35D-uw-DhX" appends="YES" id="680-uj-i7l"/>
-                                            <outletCollection property="gestureRecognizers" destination="35D-uw-DhX" appends="YES" id="8aa-oR-adm"/>
-                                            <outletCollection property="gestureRecognizers" destination="35D-uw-DhX" appends="YES" id="afH-ak-c6Q"/>
+                                            <outletCollection property="gestureRecognizers" destination="35D-uw-DhX" appends="YES" id="rvM-Vi-tO2"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -91,9 +89,6 @@
                                     <constraint firstAttribute="trailing" secondItem="qHh-Qz-oUq" secondAttribute="trailing" id="gxr-6D-1hf"/>
                                     <constraint firstItem="Nx4-ew-iFp" firstAttribute="leading" secondItem="qHh-Qz-oUq" secondAttribute="leading" id="y9m-jD-Cet"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="35D-uw-DhX" appends="YES" id="MWZ-51-ggu"/>
-                                </connections>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -114,7 +109,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="35D-uw-DhX">
                     <connections>
-                        <action selector="selectImage:" destination="BYZ-38-t0r" id="kL7-B4-WLd"/>
+                        <action selector="selectImage:" destination="BYZ-38-t0r" id="ISI-io-81T"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
