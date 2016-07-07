@@ -21,9 +21,16 @@ class DeviceTableViewController: UITableViewController {
         
         navigationItem.leftBarButtonItem = editButtonItem()
         
-        // Load sample data
+        // Load any saved devices, otherwise load sample data.
+        if let savedDevices = loadDevices() {
+            devices += savedDevices
+        }
         
-        loadSampleDevice()
+        else {
+            
+            // Load sample data
+            loadSampleDevice()
+        }
     }
 
     func loadSampleDevice() {
@@ -87,6 +94,7 @@ class DeviceTableViewController: UITableViewController {
         if editingStyle == .Delete {
             // Delete the row from the data source
             devices.removeAtIndex(indexPath.row)
+            saveDevices()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -155,8 +163,25 @@ class DeviceTableViewController: UITableViewController {
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
                 
             }
+            
+            // Save devices
+            saveDevices()
         }
         
+    }
+    
+    // MARK: NSCoding
+    
+    func saveDevices() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(devices, toFile: Device.ArchiveURL.path!)
+        
+        if !isSuccessfulSave {
+            print("Failed to save devices...")
+        }
+    }
+    
+    func loadDevices() -> [Device]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Device.ArchiveURL.path!) as? [Device]
     }
 }
 
