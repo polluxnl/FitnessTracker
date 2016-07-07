@@ -105,7 +105,20 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     @IBAction func cancel(sender: UIBarButtonItem) {
         
-        dismissViewControllerAnimated(true, completion: nil)
+        // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
+        
+        let isPresentingInAddDeviceMode = presentingViewController is UINavigationController
+        
+        if isPresentingInAddDeviceMode {
+            
+            dismissViewControllerAnimated(true, completion: nil)
+            
+        }
+        
+        else {
+            
+            navigationController!.popViewControllerAnimated(true)
+        }
     }
     
     // This method lets you configure a view controller before it's presented.
