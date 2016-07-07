@@ -156,6 +156,7 @@
 				TargetAttributes = {
 					0814F0E81D2CD9CA00C4890F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6B536V4DP7;
 					};
 					0814F0FC1D2CD9CB00C4890F = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -341,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FitnessTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pollux.FitnessTracker;
@@ -352,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FitnessTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pollux.FitnessTracker;

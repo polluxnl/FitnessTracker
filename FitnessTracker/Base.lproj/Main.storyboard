@@ -202,7 +202,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="defaultPhoto" width="300" height="300"/>
+        <image name="defaultPhoto" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VPN-Lu-ZUE"/>
