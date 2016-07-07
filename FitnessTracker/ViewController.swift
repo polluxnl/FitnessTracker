@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var deviceNameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var seatTextField: UITextField!
     
     
     override func viewDidLoad() {
@@ -23,6 +25,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // Handle the text field's user input through delegate callbacks, this sets the delegate for nameTextField to ViewController.
         
         nameTextField.delegate = self
+        weightTextField.delegate = self
+        seatTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +46,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
+        
+        if textField === nameTextField {
         deviceNameLabel.text = textField.text
+        }
+    
     }
     
     // MARK: UIImagePickerControllerDelegate

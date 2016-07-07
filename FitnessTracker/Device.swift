@@ -13,13 +13,13 @@ import UIKit
         // MARK: Properties
         
         var name: String
-        var weight: Int
+        var weight: Double
         var seat: Int?
         var photo: UIImage
         
         // MARK: Initialization
         
-        init?(name: String, weight: Int, seat: Int?, photo: UIImage) {
+        init?(name: String, weight: Double, seat: Int?, photo: UIImage) {
             
             // Initialize stored properties.
             
