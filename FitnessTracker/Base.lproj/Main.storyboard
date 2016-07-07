@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Your devices-->
+        <!--Your exercises-->
         <scene sceneID="kJa-MR-N2F">
             <objects>
                 <tableViewController id="Wlo-b8-VKB" customClass="DeviceTableViewController" customModule="FitnessTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                             <outlet property="delegate" destination="Wlo-b8-VKB" id="fKZ-tQ-EJS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your devices" id="thj-cv-9FD">
+                    <navigationItem key="navigationItem" title="Your exercises" id="thj-cv-9FD">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="bNn-ZM-roV">
                             <connections>
                                 <segue destination="VNx-C1-whN" kind="presentation" identifier="AddItem" id="BS4-oP-Wb0"/>
