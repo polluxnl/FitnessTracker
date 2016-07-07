@@ -10,7 +10,7 @@
 		080CCE541D2D385D00953585 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080CCE531D2D385D00953585 /* Device.swift */; };
 		080CCE551D2D385D00953585 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080CCE531D2D385D00953585 /* Device.swift */; };
 		0814F0ED1D2CD9CA00C4890F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814F0EC1D2CD9CA00C4890F /* AppDelegate.swift */; };
-		0814F0EF1D2CD9CA00C4890F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814F0EE1D2CD9CA00C4890F /* ViewController.swift */; };
+		0814F0EF1D2CD9CA00C4890F /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814F0EE1D2CD9CA00C4890F /* DeviceViewController.swift */; };
 		0814F0F21D2CD9CB00C4890F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0814F0F01D2CD9CB00C4890F /* Main.storyboard */; };
 		0814F0F41D2CD9CB00C4890F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0814F0F31D2CD9CB00C4890F /* Assets.xcassets */; };
 		0814F0F71D2CD9CB00C4890F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0814F0F51D2CD9CB00C4890F /* LaunchScreen.storyboard */; };
@@ -33,7 +33,7 @@
 		080CCE531D2D385D00953585 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		0814F0E91D2CD9CA00C4890F /* FitnessTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0814F0EC1D2CD9CA00C4890F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0814F0EE1D2CD9CA00C4890F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0814F0EE1D2CD9CA00C4890F /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		0814F0F11D2CD9CB00C4890F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0814F0F31D2CD9CB00C4890F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0814F0F61D2CD9CB00C4890F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				0814F0EC1D2CD9CA00C4890F /* AppDelegate.swift */,
-				0814F0EE1D2CD9CA00C4890F /* ViewController.swift */,
+				0814F0EE1D2CD9CA00C4890F /* DeviceViewController.swift */,
 				080CCE531D2D385D00953585 /* Device.swift */,
 				0814F0F01D2CD9CB00C4890F /* Main.storyboard */,
 				A87605D91D2E499B00625185 /* DeviceTableViewController.swift */,
@@ -209,7 +209,7 @@
 			files = (
 				080CCE541D2D385D00953585 /* Device.swift in Sources */,
 				A87605DA1D2E499B00625185 /* DeviceTableViewController.swift in Sources */,
-				0814F0EF1D2CD9CA00C4890F /* ViewController.swift in Sources */,
+				0814F0EF1D2CD9CA00C4890F /* DeviceViewController.swift in Sources */,
 				0814F0ED1D2CD9CA00C4890F /* AppDelegate.swift in Sources */,
 				A87605D81D2E452D00625185 /* DeviceTableViewCell.swift in Sources */,
 			);

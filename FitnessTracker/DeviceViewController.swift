@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DeviceViewController.swift
 //  FitnessTracker
 //
 //  Created by Pollux on 06/07/16.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
+class DeviceViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
 
     // MARK: Properties
     
-    @IBOutlet weak var deviceNameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var weightTextField: UITextField!
@@ -47,10 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     func textFieldDidEndEditing(textField: UITextField) {
         
-        if textField === nameTextField {
-        deviceNameLabel.text = textField.text
-        }
-    
+ 
     }
     
     // MARK: UIImagePickerControllerDelegate
