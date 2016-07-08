@@ -116,6 +116,10 @@
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="300" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Rw0-cQ-0dQ">
                                         <rect key="frame" x="130" y="126" width="300" height="300"/>
                                         <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="NMZ-ex-4ZT"/>
+                                            <constraint firstAttribute="height" constant="300" id="cOP-gB-T97"/>
+                                        </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="35D-uw-DhX" appends="YES" id="rvM-Vi-tO2"/>
                                         </connections>
@@ -123,15 +127,17 @@
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="qHh-Qz-oUq" firstAttribute="leading" secondItem="Nx4-ew-iFp" secondAttribute="leading" id="gpb-cw-CZN"/>
-                                    <constraint firstItem="Nx4-ew-iFp" firstAttribute="leading" secondItem="ONd-HX-o4a" secondAttribute="leading" id="ssd-r3-bzO"/>
+                                    <constraint firstItem="ONd-HX-o4a" firstAttribute="leading" secondItem="Nx4-ew-iFp" secondAttribute="leading" id="7T8-yB-p4I"/>
+                                    <constraint firstItem="Nx4-ew-iFp" firstAttribute="leading" secondItem="qHh-Qz-oUq" secondAttribute="leading" id="v54-od-QcQ"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="55t-fW-WTM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="8Kl-wr-70V"/>
-                            <constraint firstItem="55t-fW-WTM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sRm-wQ-1Nf"/>
+                            <constraint firstItem="55t-fW-WTM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7cf-e3-1z6"/>
+                            <constraint firstItem="55t-fW-WTM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Bfn-VL-bu0"/>
+                            <constraint firstItem="55t-fW-WTM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="I3Q-nf-0HA"/>
+                            <constraint firstItem="55t-fW-WTM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="Q1l-g0-Y88"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add new device" id="8gE-JB-59W">
@@ -205,6 +211,6 @@
         <image name="defaultPhoto" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VPN-Lu-ZUE"/>
+        <segue reference="RzH-Lg-uYZ"/>
     </inferredMetricsTieBreakers>
 </document>
